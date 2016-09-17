@@ -27,6 +27,18 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/alt/video-js-cdn.css" rel="stylesheet">
+	<script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+    	apiKey: "AIzaSyDcTiWFmnMgfO3AZnuUjznNL2cYZBdPlWI",
+    	authDomain: "over2t-ced78.firebaseapp.com",
+    	databaseURL: "https://over2t-ced78.firebaseio.com",
+    	storageBucket: "",
+    	messagingSenderId: "524741120595"
+  		};
+  		firebase.initializeApp(config);
+	</script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/video.js/5.10.2/video.js"></script>
   	<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/3.0.2/videojs-contrib-hls.js"></script>
   
@@ -51,65 +63,28 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="">Noticias</a>
                     </li>
                     <li>
-                        <a href="services.html">Services</a>
+                        <a href="">Canales</a>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="">Contacto</a>
                     </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">EPG <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                                <a href="">Canal 2</a>
                             </li>
                             <li>
-                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                                <a href="">Canal 10</a>
                             </li>
                             <li>
-                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                                <a href="">Canal 8</a>
                             </li>
                             <li>
-                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-item.html">Single Portfolio Item</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="blog-home-1.html">Blog Home 1</a>
-                            </li>
-                            <li>
-                                <a href="blog-home-2.html">Blog Home 2</a>
-                            </li>
-                            <li>
-                                <a href="blog-post.html">Blog Post</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="full-width.html">Full Width Page</a>
-                            </li>
-                            <li>
-                                <a href="sidebar.html">Sidebar Page</a>
-                            </li>
-                            <li>
-                                <a href="faq.html">FAQ</a>
-                            </li>
-                            <li>
-                                <a href="404.html">404</a>
-                            </li>
-                            <li>
-                                <a href="pricing.html">Pricing Table</a>
+                                <a href="">Canal 12</a>
                             </li>
                         </ul>
                     </li>
@@ -165,63 +140,147 @@
         <!-- Portfolio Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">Portfolio Heading</h2>
+                <h2 class="page-header">On Demand</h2>
             </div>
+			<div class="col-md-4 col-sm-6">
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+						    <a class="posterLink" href="itemVideo01.html">
+						   		<time datetime="2016-09-17T09:25:00Z">lun. 5, 10:00</time>
+						   		<img src="img/rsz_programa01.jpg" alt="" class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+							    <ul class ="titleContainer">
+							       <li class="title">Carlos Paz al dia</li>
+							       <li class="title2Line">Primera Edicion</li>
+							    </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<a class="posterLink" href="itemVideo02.html">
+							<time datetime="2016-09-17T09:25:00Z">már. 6, 17:00</time> 
+							<img src="img/rsz_programa02.jpg" alt="" class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+								<ul class="titleContainer">
+									<li class="title">Carlos Paz al dia</li>
+									<li class="title2Line">Segunda Edicion</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<a class="posterLink" href="itemVideo03.html">
+							<time datetime="2016-09-17T09:25:00Z">dom. 11, 16:00</time>
+							<img src="img/rsz_programa03.jpg" alt="" class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+								<ul class="titleContainer">
+									<li class="title">Forum</li>
+									<li class="title2Line">Santiago Berioli y Andy Ferreyra</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4 col-sm-6">
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<a class="posterLink" href="itemVideo01.html">
+							<time datetime="2016-09-17T09:25:00Z">már. 13, 17:00</time>  
+							<img src="img/rsz_programa04.jpg" alt=""
+								class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+								<ul class="titleContainer">
+									<li class="title">Carlos Paz al dia</li>
+									<li class="title2Line">Segunda Edicion</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<a class="posterLink" href="itemVideo02.html">
+							<time datetime="2016-09-17T09:25:00Z">sáb. 17, 16:00</time> 
+							<img src="img/rsz_programa05.jpg" alt="" class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+								<ul class="titleContainer">
+									<li class="title">Mañaneros</li>
+									<li class="title2Line">Santiago Berioli y Gabriela Yalangozian</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
             <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <a href="portfolio-item.html">
-                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
-                </a>
-            </div>
+				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<a class="posterLink" href="itemVideo03.html">
+							<time datetime="2016-09-17T09:25:00Z">dom. 18, 21:00</time>
+							<img src="img/rsz_programa06.jpg" alt="" class="img-responsive img-hover">
+							</a>
+							<div class="carousel-caption programTitle">
+								<ul class="titleContainer">
+									<li class="title">VCPLAY</li>
+									<li class="title2Line">La cobertura mas completa de deportistas</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
         </div>
         <!-- /.row -->
 
         <!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
-                <h2 class="page-header">OVER THE TOP</h2>
+                <h2 class="page-header">Canal en vivo</h2>
             </div>
             <div class="col-md-6">
-                <p>Main Video:</p>
+                <p>Canal 10</p>
                 <ul>
-                    <li><strong>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</strong>
+                    <li><strong>Emision en vivo</strong>
                     </li>
-                    <li>xxxxxxxxxxxxxxxxxxxxxx</li>
-                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-                    <li>xxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
-                    <li>xxxxxxxxxxxxxxxxx</li>
-                    <li>xxxxxxxxxxxxxxx</li>
+                    <li>Noticas</li>
+                    <li>Peliculas</li>
+                    <li>Expectaculos</li>
+                    <li>Deportes</li>
                 </ul>
-                <p>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+                <p>Canal 10 (con sede principal de transmisiones en el indicativo de señal LV 80) 
+                	es un canal Cordobés de televisión abierta que transmite 
+                	en el canal 10 en la Ciudad de Córdoba, 
+                	el cual pertenece a los Servicios de radio 
+                	y televisión de la Universidad Nacional de Córdoba</p>
             </div>
             <div class="col-md-6">
-              	<video id="my_video_1" class="video-js vjs-default-skin main-video" controls preload="auto"  data-setup='{}'>
-    				<source src="http://cptv-50a2.kxcdn.com/hls/cptv/index.m3u8" type="application/x-mpegURL">
-  				</video>
+            	<div class="videocontent">
+            	    <video id="my_video_1" class="video-js vjs-default-skin vjs-4-3 vjs-big-play-centered" controls poster="img/canal10.jpg" data-setup='{"fluid": true}'>
+    					<source src="http://dpme12hls-i.akamaihd.net/hls/live/249637/dpme12_3/master.m3u8" type="application/x-mpegURL">
+  					</video>
+            	</div>
             </div>
         </div>
         <!-- /.row -->
@@ -247,24 +306,24 @@
 					<a href="#">Contact</a>
 				</p>
 
-				<p class="footer-company-name">Company Name &copy; 2015</p>
+				<p class="footer-company-name">Carlos Paz Televisión S.A. &copy; 2015</p>
 			</div>
 
 			<div class="footer-center">
 
 				<div>
 					<i class="fa fa-map-marker"></i>
-					<p><span>21 Revolution Street</span> Paris, France</p>
+					<p><span>Dirección de oficina comercial</span>Carlos Paz - San Martín Esq. Zuviría</p>
 				</div>
 
 				<div>
 					<i class="fa fa-phone"></i>
-					<p>+1 555 123456</p>
+					<p>03541 - 487612</p>
 				</div>
 
 				<div>
 					<i class="fa fa-envelope"></i>
-					<p><a href="mailto:support@company.com">support@company.com</a></p>
+					<p><a href="mailto:info@cptv.com.ar">info@cptv.com.ar</a></p>
 				</div>
 
 			</div>
@@ -272,8 +331,8 @@
 			<div class="footer-right">
 
 				<p class="footer-company-about">
-					<span>About the company</span>
-					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+					<span>Carlos Paz Televisión S.A.</span>
+					 Todos los Derechos Reservados - Soporte técnico: 03541 - 15374401
 				</p>
 
 				<div class="footer-icons">
