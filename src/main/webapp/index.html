@@ -46,7 +46,145 @@
 
 <body>
 
-    <!-- Navigation -->
+     	
+      	 <!-- -Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+	    	<div class="modal-content login-modal">
+	      		<div class="modal-header login-modal-header">
+	        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        		<h4 class="modal-title text-center" id="loginModalLabel">CPTV-Go Login</h4>
+	      		</div>
+	      		<div class="modal-body">
+	      			<div class="text-center">
+		      			<div role="tabpanel" class="login-tab">
+						  	<!-- Nav tabs -->
+						  	<ul class="nav nav-tabs loginPopup" role="tablist">
+						    	<li role="presentation" class="active"><a id="signin-taba" href="#home" aria-controls="home" role="tab" data-toggle="tab">Loggin</a></li>
+						    	<li role="presentation"><a id="signup-taba" href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Registrarse</a></li>
+						    	<li role="presentation"><a id="forgetpass-taba" href="#forget_password" aria-controls="forget_password" role="tab" data-toggle="tab">Olvidó Password</a></li>
+						  	</ul>
+						
+						  	<!-- Tab panes -->
+						 	<div class="tab-content">
+						    	<div role="tabpanel" class="tab-pane active text-center" id="home">
+						    		&nbsp;&nbsp;
+						    		<span id="login_fail" class="response_error" style="display: none;">Loggin falló, intente nuevamente.</span>
+						    		<div class="clearfix"></div>
+						    		<form>
+										<div class="form-group">
+									    	<div class="input-group">
+									      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
+									      		<input type="text" class="form-control" id="login_username" placeholder="Username">
+									    	</div>
+									    	<span class="help-block has-error" id="email-error"></span>
+									  	</div>
+									  	<div class="form-group">
+									    	<div class="input-group">
+									      		<div class="input-group-addon"><i class="fa fa-lock"></i></div>
+									      		<input type="password" class="form-control" id="password" placeholder="Password">
+									    	</div>
+									    	<span class="help-block has-error" id="password-error"></span>
+									  	</div>
+							  			<button type="button" id="login_btn" class="btn btn-block bt-login" data-loading-text="Signing In....">Login</button>
+							  			<div class="clearfix"></div>
+							  			<div class="login-modal-footer">
+							  				<div class="row">
+												<div class="col-xs-8 col-sm-8 col-md-8">
+													<i class="fa fa-lock"></i>
+													<a href="javascript:;" class="forgetpass-tab"> Olvidó su password? </a>
+												
+												</div>
+												
+												<div class="col-xs-4 col-sm-4 col-md-4">
+													<i class="fa fa-check"></i>
+													<a href="javascript:;" class="signup-tab"> Sign Up </a>
+												</div>
+											</div>
+							  			</div>
+									</form>
+						    	</div>
+						    	<div role="tabpanel" class="tab-pane" id="profile">
+						    	    &nbsp;&nbsp;
+						    	    <span id="registration_fail" class="response_error" style="display: none;">Registration failed, please try again.</span>
+						    		<div class="clearfix"></div>
+						    		<form>
+										<div class="form-group">
+									    	<div class="input-group">
+									      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
+									      		<input type="text" class="form-control" id="username" placeholder="Username">
+									    	</div>
+									    	<span class="help-block has-error" data-error='0' id="username-error"></span>
+									  	</div>
+									  	<div class="form-group">
+									    	<div class="input-group">
+									      		<div class="input-group-addon"><i class="fa fa-at"></i></div>
+									      		<input type="text" class="form-control" id="remail" placeholder="Email">
+									    	</div>
+									    	<span class="help-block has-error" data-error='0' id="remail-error"></span>
+									  	</div>
+							  			<button type="button" id="register_btn" class="btn btn-block bt-login" data-loading-text="Registering....">Register</button>
+										<div class="clearfix"></div>
+										<div class="login-modal-footer">
+							  				<div class="row">
+												<div class="col-xs-8 col-sm-8 col-md-8">
+													<i class="fa fa-lock"></i>
+													<a href="javascript:;" class="forgetpass-tab"> Olvidó su password? </a>
+												
+												</div>
+												
+												<div class="col-xs-4 col-sm-4 col-md-4">
+													<i class="fa fa-check"></i>
+													<a href="javascript:;" class="signin-tab"> Sign In </a>
+												</div>
+											</div>
+							  			</div>
+									</form>
+						    	</div>
+						    	<div role="tabpanel" class="tab-pane text-center" id="forget_password">
+						    		&nbsp;&nbsp;
+						    	    <span id="reset_fail" class="response_error" style="display: none;"></span>
+						    		<div class="clearfix"></div>
+						    		<form>
+										<div class="form-group">
+									    	<div class="input-group">
+									      		<div class="input-group-addon"><i class="fa fa-user"></i></div>
+									      		<input type="text" class="form-control" id="femail" placeholder="Email">
+									    	</div>
+									    	<span class="help-block has-error" data-error='0' id="femail-error"></span>
+									  	</div>
+									  	
+							  			<button type="button" id="reset_btn" class="btn btn-block bt-login" data-loading-text="Please wait....">Recuperar Password</button>
+										<div class="clearfix"></div>
+										<div class="login-modal-footer">
+							  				<div class="row">
+												<div class="col-xs-6 col-sm-6 col-md-6">
+													<i class="fa fa-lock"></i>
+													<a href="javascript:;" class="signin-tab"> Sign In </a>
+												
+												</div>
+												
+												<div class="col-xs-6 col-sm-6 col-md-6">
+													<i class="fa fa-check"></i>
+													<a href="javascript:;" class="signup-tab"> Sign Up </a>
+												</div>
+											</div>
+							  			</div>
+									</form>
+						    	</div>
+						  	</div>
+						</div>
+	      				
+	      			</div>
+	      		</div>
+	      		
+	    	</div>
+	   </div>
+ 	</div>
+ 	<!-- - Login Model Ends Here -->
+
+
+	<!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top navbar-menu" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -87,6 +225,12 @@
                                 <a href="">Canal 12</a>
                             </li>
                         </ul>
+                    </li>
+                    <li>
+                      <span id="userNameItem" class="glyphicon glyphicon-user userIcon"></span>
+                    </li>
+                    <li>
+                      <span id="iconOff" class="glyphicon glyphicon-off userIcon logOffInactive"></span>
                     </li>
                 </ul>
             </div>
@@ -137,7 +281,7 @@
 
     <!-- Page Content -->
     <div class="container">
-        <!-- Portfolio Section -->
+		<!-- Portfolio Section -->
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">On Demand</h2>
@@ -146,7 +290,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-						    <a class="posterLink" href="itemVideo01.html">
+						    <a class="posterLink" data='itemVideo01.html'>
 						   		<time datetime="2016-09-17T09:25:00Z">lun. 5, 10:00</time>
 						   		<img src="img/rsz_programa01.jpg" alt="" class="img-responsive img-hover">
 							</a>
@@ -164,7 +308,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<a class="posterLink" href="itemVideo02.html">
+							<a class="posterLink" data='itemVideo02.html'>
 							<time datetime="2016-09-17T09:25:00Z">már. 6, 17:00</time> 
 							<img src="img/rsz_programa02.jpg" alt="" class="img-responsive img-hover">
 							</a>
@@ -182,7 +326,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<a class="posterLink" href="itemVideo03.html">
+							<a class="posterLink" data='itemVideo03.html'>
 							<time datetime="2016-09-17T09:25:00Z">dom. 11, 16:00</time>
 							<img src="img/rsz_programa03.jpg" alt="" class="img-responsive img-hover">
 							</a>
@@ -200,7 +344,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<a class="posterLink" href="itemVideo01.html">
+							<a class="posterLink" data='itemVideo01.html'>
 							<time datetime="2016-09-17T09:25:00Z">már. 13, 17:00</time>  
 							<img src="img/rsz_programa04.jpg" alt=""
 								class="img-responsive img-hover">
@@ -219,7 +363,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<a class="posterLink" href="itemVideo02.html">
+							<a class="posterLink" data='itemVideo02.html'>
 							<time datetime="2016-09-17T09:25:00Z">sáb. 17, 16:00</time> 
 							<img src="img/rsz_programa05.jpg" alt="" class="img-responsive img-hover">
 							</a>
@@ -237,7 +381,7 @@
 				<div id="mycarousel" class="carousel slide carruselSeparator" data-ride="carousel">
 					<div class="carousel-inner">
 						<div class="item active">
-							<a class="posterLink" href="itemVideo03.html">
+							<a class="posterLink" data='itemVideo03.html'>
 							<time datetime="2016-09-17T09:25:00Z">dom. 18, 21:00</time>
 							<img src="img/rsz_programa06.jpg" alt="" class="img-responsive img-hover">
 							</a>
@@ -254,7 +398,8 @@
         </div>
         <!-- /.row -->
 
-        <!-- Features Section -->
+
+		<!-- Features Section -->
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="page-header">Canal en vivo</h2>
@@ -278,6 +423,7 @@
             <div class="col-md-6">
             	<div class="videocontent">
             	    <video id="my_video_1" class="video-js vjs-default-skin vjs-4-3 vjs-big-play-centered" controls poster="img/canal10.jpg" data-setup='{"fluid": true}'>
+    					<!-- http://live.tvplayerlatino.com/lista_remota/src1/ead8m.m3u8 -->
     					<source src="http://dpme12hls-i.akamaihd.net/hls/live/249637/dpme12_3/master.m3u8" type="application/x-mpegURL">
   					</video>
             	</div>
@@ -353,14 +499,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
-
+	<script src="js/cptv.js"></script>
 </body>
 
 </html>

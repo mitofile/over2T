@@ -383,5 +383,147 @@ time:after{
 	margin-top: 15px;
 }
 
+.userIcon{
+    position: relative;
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    margin-left: 14px;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.logOffInactive{
+	color: grey;
+    cursor: default;
+}
+
+.logOffActive{
+	color: white;
+    cursor:pointer;
+}
+
+/*
+Login Styles*************************
+*/
+
+.nav{
+	font-family:Droid Sans;
+	text-transform: uppercase;
+}
+.nav a{
+	font-family:Droid Sans;
+}
+
+.loginPopup{
+	font-size: 0.74em;
+}
+
+/* navbar */
+.navbar-default {
+    background-color: #f04949;
+    border-color: #f04949;
+}
+/* title */
+.navbar-default .navbar-brand {
+    color: #fff;
+    font-size:12px;
+    font-weight: bold;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #fff;
+}
+/* link */
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+}
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #f04949;
+    font-size: 14px;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #f04949;
+}
+.navbar-nav li a:first{margin-left: 20%;}
+.navbar-nav li a{margin-right: 45%;}
+.navbar-nav li a i{margin-right: 10px;}
+/*** nav ends here ****/
 
 
+.form-inline .form-group{
+	margin-bottom: 20px;
+	float: right;
+}
+
+.input-group-addon{
+  background-color: #737373;	
+}
+
+.btn-launch,.btn-launch:hover, .btn-launch:active, .btn-launch:focus{
+	background-color: #2ecc71;
+    border: medium none #2ecc71;
+    box-shadow: 0 3px 0 #d35400, 0 5px 2px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 20px 40px;
+    margin-top:10%;
+}
+.bt-login,.bt-login:hover, .bt-login:active, .bt-login:focus {
+	text-shadow: 0 -1px #000000;
+    background-color: #4e4d4d;
+    color: #ffffff;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition: background-color 300ms linear 0s;
+}
+
+
+.login-tab {
+	margin: 0 auto;
+	max-width: 380px;
+}
+
+.login-modal-header {
+	background: #4e4d4d;
+    color: #156bb5;
+}
+
+.login-modal-header .modal-title {
+	color: #fff;
+}
+
+.login-modal-header .close {
+	color: #fff;
+}
+
+.login-modal i {
+	color: #000;
+}
+
+.login-modal form {
+	max-width: 340px;
+}
+
+.tab-pane form {
+	margin: 0 auto;
+}
+.login-modal-footer{
+	margin-top:15px;
+	margin-bottom:15px;
+}
+
+.response_error{
+	color:red;
+}
