@@ -312,6 +312,12 @@ header.carousel .fill {
     }
 }
 
+@media(max-width:767px) {
+	.loginPopup{
+	    font-size: 10px !important;
+	}
+}
+
 /*
 *************************DECORADORES****************************
 */
@@ -416,7 +422,7 @@ Login Styles*************************
 }
 
 .loginPopup{
-	font-size: 0.74em;
+	font-size: 0.9em;
 }
 
 /* navbar */
